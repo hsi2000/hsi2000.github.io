@@ -42,15 +42,43 @@
       <h1>Gallery</h1>
 
 		<div class="container">
-			<img src="images/1.jpeg" alt="Spa Image 1">
-			<img src="images/2.jpeg" alt="Spa Image 2">
-			<img src="images/3.jpeg" alt="Spa Image 3">
-			<img src="images/4.jpeg" alt="Spa Image 4">
-			<img src="images/5.jpeg" alt="Spa Image 5">
-			<img src="images/6.jpeg" alt="Spa Image 6">
-			<img src="images/7.jpeg" alt="Spa Image 7">
-			<img src="images/8.jpeg" alt="Spa Image 7">
+
+      <div class="mySlides">
+        <div class="numberText">1/8</div>
+        <img src="images/1.png" alt="Travel poster">
+      </div>
+			<div class="mySlides">
+        <div class="numberText">2/8</div>
+        <img src="images/2.png" alt="Ticket">
+      </div>
+			<div class="mySlides">
+        <div class="numberText">3/8</div>
+			<img src="images/3.png" alt="Hotel">
+      </div>
+      <div class="mySlides">
+        <div class="numberText">4/8</div>
+			<img src="images/4.png" alt="Tour">
+      </div>
+      <div class="mySlides">
+        <div class="numberText">5/8</div>
+			<img src="images/5.png" alt="Tour place">
+      </div>
+      <div class="mySlides">
+        <div class="numberText">6/8</div>
+			<img src="images/6.png" alt="Plane">
+      </div>
+      <div class="mySlides">
+        <div class="numberText">7/8</div>
+			<img src="images/7.png" alt="Hot air balloons">
+      </div>
+      <div class="mySlides">
+        <div class="numberText">8/8</div>
+			<img src="images/8.png" alt="Plane view">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">Previous</a>
+      <a class="next" onclick="plusSlides(1)">Next</a>
 		</div>
+
    <!-- Call to Action -->
    <section class="cta-container">
     <h2>Ready to Experience Our Services?</h2>
@@ -67,6 +95,37 @@
       </ul>
     <p >&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
   </footer>
+  <script>
+    let slideIndex=1;
+    showSlides(slideIndex);
+
+    function plusSlides(n){
+      showSlides(slideIndex+=n);
+    }
+
+    function currentSlide(n){
+      showSlides(slideIndex=n);
+    }
+
+    function showSlides(n){
+      let i;
+      let slides=document.getElementsByClassName("mySlides");
+
+      if (n>slides.length){
+        slideIndex=1;
+      }
+
+      if(n<1){
+        slideIndex=slides.length;
+      }
+
+      for (i=0; i<slides.length;i++){
+        slides[i].style.display="none";
+      }
+
+      slides[slideIndex-1].style.display="block";
+    }
+  </script>
  </div>
 </body>
 </html>
