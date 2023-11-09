@@ -1,4 +1,4 @@
-app.js 
+
 //API key 
 const apiKey = 'a9f6b8f2d8831a4e0cf127e156a46d36';
 
